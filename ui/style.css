@@ -1,0 +1,54 @@
+body {
+    background-color: #050505; /* Fundo quase preto para sumir na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#nixie-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw; /* Ocupa toda a largura da janela */
+}
+
+#nixie-container img {
+    width: 10vw; /* Cada tubo ocupa 10% da largura da janela */
+    max-width: 100px; /* Limite máximo para não estourar em monitores ultrawide */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 1vw; /* Margem responsiva entre os tubos */
+}
+
+/* Painel invisível que acende com o hover */
+#control-panel {
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#control-panel:hover, #control-panel:focus-within {
+    opacity: 1.0;
+}
+
+.shift-btn {
+    background-color: transparent;
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.shift-btn:hover {
+    background-color: #FF8C00;
+    color: #111;
+    box-shadow: 0 0 15px #FF8C00;
+}
