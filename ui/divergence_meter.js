@@ -83,7 +83,6 @@ document.addEventListener('keydown', async (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Trava de segurança: avisa no console se o arquivo JS original não for encontrado
     if (typeof particlesJS === 'undefined') {
         console.error("ERRO: O arquivo particles.js não foi encontrado ou não carregou a tempo.");
         return;
@@ -92,23 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
     particlesJS('particles-js', {
         "particles": {
             "number": {
-                "value": 100, // Um pouco mais de poeira temporal
+                "value": 80, 
                 "density": { "enable": true, "value_area": 800 }
             },
-            "color": { "value": "#FF8C00" }, // Laranja Nixie
+            "color": { "value": "#ff8c00" }, // Laranja
             "shape": { "type": "circle" },
             "opacity": {
-                "value": 0.8, // Opacidade base bem alta para brilhar no fundo escuro
+                "value": 0.8,
                 "random": true,
                 "anim": { "enable": true, "speed": 1, "opacity_min": 0.3, "sync": false }
             },
             "size": {
-                "value": 4, // Tamanho um pouco maior para ganhar destaque
+                "value": 4,
                 "random": true,
                 "anim": { "enable": false }
             },
             "line_linked": {
-                "enable": false // Mantém sem linhas, apenas poeira
+                "enable": true,
+                "distance": 150,
+                "color": "#ff8c00", // Laranja exato
+                "opacity": 0.6,     // Mais brilhante para destacar no preto
+                "width": 1.5        // Um pouco mais espesso
             },
             "move": {
                 "enable": true,

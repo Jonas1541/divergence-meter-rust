@@ -14,6 +14,8 @@ body {
     align-items: flex-end;
     justify-content: center;
     width: 100vw; /* Ocupa toda a largura da janela */
+    position: relative; /* <-- A mágica que faz o z-index funcionar */
+    z-index: 5;
 }
 
 #nixie-container img {
@@ -25,9 +27,11 @@ body {
 
 /* Painel invisível que acende com o hover */
 #control-panel {
-    margin-top: 30px;
+    margin-top: 4vh;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s;
+    position: relative; /* <-- Garante que o botão fique clicável acima da teia */
+    z-index: 5;
 }
 
 #control-panel:hover, #control-panel:focus-within {
