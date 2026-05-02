@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Container das partículas de poeira (Fundo) -->
+    <div id="particles-js"></div>
+
     <!-- Container principal dos tubos Nixie -->
     <div id="nixie-container">
         <img id="digit-0" src="images/0.png" alt="0">
@@ -23,6 +26,10 @@
         <button class="shift-btn" onclick="triggerShift()">EL PSY KONGROO</button>
     </div>
 
+    <!-- Scripts: A ordem importa muito aqui! -->
+    <!-- Primeiro carregamos a biblioteca original -->
+    <script src="particles.js"></script>
+    <!-- Depois carregamos o nosso motor que usa a biblioteca -->
     <script src="divergence_meter.js"></script>
 </body>
 </html>

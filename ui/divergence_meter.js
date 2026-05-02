@@ -81,3 +81,53 @@ document.addEventListener('keydown', async (event) => {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Trava de segurança: avisa no console se o arquivo JS original não for encontrado
+    if (typeof particlesJS === 'undefined') {
+        console.error("ERRO: O arquivo particles.js não foi encontrado ou não carregou a tempo.");
+        return;
+    }
+
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 100, // Um pouco mais de poeira temporal
+                "density": { "enable": true, "value_area": 800 }
+            },
+            "color": { "value": "#FF8C00" }, // Laranja Nixie
+            "shape": { "type": "circle" },
+            "opacity": {
+                "value": 0.8, // Opacidade base bem alta para brilhar no fundo escuro
+                "random": true,
+                "anim": { "enable": true, "speed": 1, "opacity_min": 0.3, "sync": false }
+            },
+            "size": {
+                "value": 4, // Tamanho um pouco maior para ganhar destaque
+                "random": true,
+                "anim": { "enable": false }
+            },
+            "line_linked": {
+                "enable": false // Mantém sem linhas, apenas poeira
+            },
+            "move": {
+                "enable": true,
+                "speed": 1.5, 
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": { "enable": false },
+                "onclick": { "enable": false },
+                "resize": true
+            }
+        },
+        "retina_detect": true
+    });
+});

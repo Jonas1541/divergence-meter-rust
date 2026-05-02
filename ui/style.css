@@ -34,6 +34,16 @@ body {
     opacity: 1.0;
 }
 
+#particles-js {
+    position: absolute;
+    width: 100vw;  /* Força exatamente a largura total do monitor/janela */
+    height: 100vh; /* Força exatamente a altura total do monitor/janela */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Fica atrás dos tubos (z-index: 5) e do glitch (z-index: 10) */
+    pointer-events: none; /* Garante que as partículas não bloqueiem o clique no botão */
+}
+
 .shift-btn {
     background-color: transparent;
     color: #FF8C00;
