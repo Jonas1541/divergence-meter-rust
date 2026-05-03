@@ -91,31 +91,31 @@ document.addEventListener('DOMContentLoaded', () => {
     particlesJS('particles-js', {
         "particles": {
             "number": {
-                "value": 80, 
+                "value": 400, // Muito mais partículas (bolinhas)
                 "density": { "enable": true, "value_area": 800 }
             },
-            "color": { "value": "#ff8c00" }, // Laranja
+            "color": { "value": ["#FF8C00", "#FF0000", "#FF4500"] }, 
             "shape": { "type": "circle" },
             "opacity": {
-                "value": 0.8,
+                "value": 0.6,
                 "random": true,
-                "anim": { "enable": true, "speed": 1, "opacity_min": 0.3, "sync": false }
+                "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
             },
             "size": {
-                "value": 4,
+                "value": 2,
                 "random": true,
                 "anim": { "enable": false }
             },
             "line_linked": {
                 "enable": true,
-                "distance": 150,
-                "color": "#ff8c00", // Laranja exato
-                "opacity": 0.6,     // Mais brilhante para destacar no preto
-                "width": 1.5        // Um pouco mais espesso
+                "distance": 65,     // Reduzido de 110 para 65: só conecta se passar muito perto!
+                "color": "#FF8C00", // A linha pode continuar laranja para manter a coesão
+                "opacity": 0.2,     // Ainda mais sutil
+                "width": 0.5
             },
             "move": {
                 "enable": true,
-                "speed": 1.5, 
+                "speed": 1.0,       // Levemente mais lento para dar elegância
                 "direction": "none",
                 "random": true,
                 "straight": false,

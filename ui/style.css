@@ -1,5 +1,5 @@
 body {
-    background-color: #050505; /* Fundo quase preto para sumir na tela */
+    background-color: #000000; /* Fundo quase preto para sumir na tela */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    position: relative;
 }
 
 #nixie-container {
@@ -19,10 +20,10 @@ body {
 }
 
 #nixie-container img {
-    width: 10vw; /* Cada tubo ocupa 10% da largura da janela */
-    max-width: 100px; /* Limite máximo para não estourar em monitores ultrawide */
+    width: 8vw; /* Cada tubo ocupa 8% da largura da janela */
+    max-width: 90px; /* Limite máximo para não estourar em monitores ultrawide */
     height: auto; /* Mantém a proporção da imagem */
-    margin: 0 1vw; /* Margem responsiva entre os tubos */
+    margin: 0 1px; /* Margem responsiva entre os tubos */
 }
 
 /* Painel invisível que acende com o hover */
